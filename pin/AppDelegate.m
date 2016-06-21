@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "XYTestViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    XYTestViewController *testVC = [[XYTestViewController alloc]init];
+    
+    self.window.rootViewController = testVC;
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 
